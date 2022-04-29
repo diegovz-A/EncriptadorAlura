@@ -1,20 +1,22 @@
+body{
+    display: flex;
+    margin:0;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(imagenes/Fondo.jpg);
+}
 header{
-    background:linear-gradient(180deg,rgb(74, 151, 74),rgb(178, 178, 178));
+    background:content-box;
     width: 100%;
     display: flex; 
     flex-direction: column;
-    border-style:inherit;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: rgb(118, 118, 118);
-}
+
 .tituloPrincipal{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
     text-align: center;
+    color: #fff;
 }
 .contenedor{
     display: flex;
@@ -24,60 +26,95 @@ body{
     flex-wrap: wrap;
 }
 
-.contenedor1{
+.contenedores{
     display: flex;
-}
-.botones{
-    padding: 1em;
 }
 .encriptador{
     display: inline-block;
 }
+.botones{
+    padding: 1em;
+}
 #cryptoText{
     resize: none;
+    background:content-box;
+    margin-left: 20px;
     width: 60vw;
     height: 20vw;
     border: 5px solid grey;
     text-transform: lowercase;
-    background:fixed;
     border-radius: 15px;
-}
+    font-size: 15px;
+    color: white;
 
+}
+#cryptoText::placeholder{
+    color: #fff;
+    font-size: 15px;
+}
 #btnEncriptador{
-    background-color: rgb(32, 175, 32);
+    background:content-box;
     border-radius: 10%;
     padding: 1em;
+    font-weight: bold;
+    color: whitesmoke;
 }   
+#btnEncriptador:hover{
+    background: rgb(81, 221, 81);
+    color: black;
+}
 #btnDesencriptador{
-    background-color: rgb(178, 178, 178);
+    background:content-box;
     border-radius: 10%;
     padding: 1em;
+    font-weight: bold;
+    color: whitesmoke;
+}
+#btnDesencriptador:hover{
+    background:rgb(212, 58, 58);
+    color: black;
 }
 
-#contenedor2{
-    display: flex;
-}
 .resultado{
-    display: flex;
+    display:inline-block;
 }
-#resultado{
+#resultadoText{
     background: fixed;
     border: 5px solid grey;
     border-radius: 15px;
     resize: none;
+    margin-left:20px;
     width: 60vw;
     height: 20vw;
 }
-#copiarTexto{
-    background-color: rgb(178, 178, 178);
+#btnCopiar{
+    background:content-box;
     border-radius: 10%;
-    padding: 1em;
+    padding: 2em;
+    font-weight: bold;
+    color: whitesmoke;
+}
+#btnCopiar:hover{
+    background:rgb(93, 93, 240);
+    color: black;
 }
 
 .piePagina{
     margin-top: auto;
     width: 100%;
-    text-align: center;
     padding: 1em 0;
-    background-color: rgb(32, 175, 32);
+    background-color:black;
+}
+.textoPiePagina{
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}
+.piePagina ul{
+    list-style: none;
+}
+.contacto{
+    display: flex;
+    margin-left: 80vw;
 }

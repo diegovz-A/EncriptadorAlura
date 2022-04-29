@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="style.css">
     <title>Encriptador</title>
 </head>
@@ -12,38 +13,52 @@
         <h1 class="tituloPrincipal">Encriptador</h1>
     </header>
 
-    <div class="contenedor">
+    <main>
+        
+        <div class="contenedor">
 
-        <div class="contenedor1">
+            <div class="contenedores">
 
-            <div class="encriptador">
-                <textarea name="encriptador" id="cryptoText" cols="30" rows="10" placeholder="Ingrese su texto aqui..."></textarea>
+                <div class="encriptador">
+                    <textarea name="encriptador" id="cryptoText" cols="30" rows="10" placeholder="Ingrese su texto aqui..."></textarea>
+                </div>
+        
+                <div class="botones">
+                    <input type="button" value="Encriptar" id="btnEncriptador" >
+                    <input type="button" value="Desencriptar"  id="btnDesencriptador">
+                </div>
+
             </div>
-    
-            <div class="botones">
-                <input type="button" value="Encriptar" id="btnEncriptador" >
-                <input type="button" value="Desencriptar"  id="btnDesencriptador">
+
+            <div class="contenedores">
+
+                <div class="resultado">
+                    <textarea name="resultado" id="resultadoText" cols="100" rows="10"></textarea>
+                </div>
+        
+                <div class="botones">
+                    <input type="button" value="copiar" id="btnCopiar">
+                </div>
             </div>
+
 
         </div>
 
-        <div id="contener2">
-
-            <div class="resultado">
-                <textarea name="resultado" id="resultado" cols="100" rows="10"></textarea>
-            </div>
-    
-            <div class="copiar">
-                <input type="button" value="copiar" id="copiarTexto">
-            </div>
-        </div>
-
-
-    </div>
+    </main>
 
     <footer class="piePagina">
-        Pagina desarrollada por DiegoVz
+        <p class="textoPiePagina">&copy; Desarrollada por DiegoVz - 2022</p> 
+        <h3 class="contacto">
+            <ul>
+                <li>
+                    <a href="https://github.com/diegovz-A" target="_blank">
+                        <img src="imagenes/github_negativo.png">
+                    </a>
+                </li>
+            </ul>
+        </h3>
     </footer>
+
 </body>
 <script src="scripts.js">
 </script>

@@ -1,4 +1,4 @@
-var resultado  = document.getElementById("resultado");
+var resultado  = document.getElementById("resultadoText");
 
 var a = "ai";
 var e = "enter";
@@ -99,7 +99,7 @@ function desencriptar(){
             nuevoTexto += texto[index];
         }
     }
-    document.getElementById("resultado").value = nuevoTexto;
+    document.getElementById("resultadoText").value = nuevoTexto;
 }
 
 function copiarTexto (){
