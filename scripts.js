@@ -117,4 +117,4 @@ function copiarTexto (){
 
 document.getElementById("btnEncriptador").onclick = encriptar;
 document.getElementById("btnDesencriptador").onclick = desencriptar;
-document.getElementById("copiarTexto").onclick = copiarTexto;
+document.getElementById("btnCopiar").onclick = copiarTexto;

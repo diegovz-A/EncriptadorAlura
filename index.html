@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
 <body>
@@ -15,7 +17,7 @@
 
     <main>
         
-        <div class="contenedor">
+        <section class="contenedor">
 
             <div class="contenedores">
 
@@ -23,9 +25,11 @@
                     <textarea name="encriptador" id="cryptoText" cols="30" rows="10" placeholder="Ingrese su texto aqui..."></textarea>
                 </div>
         
-                <div class="botones">
-                    <input type="button" value="Encriptar" id="btnEncriptador" >
-                    <input type="button" value="Desencriptar"  id="btnDesencriptador">
+                <div class="botones-caja">
+                    <label for="btnEncriptador"></label>
+                    <input class="botones" type="button" value="Encriptar" id="btnEncriptador" >
+                    <label for="btnDesencriptador"></label>
+                    <input class="botones" type="button" value="Desencriptar"  id="btnDesencriptador">
                 </div>
 
             </div>
@@ -36,26 +40,23 @@
                     <textarea name="resultado" id="resultadoText" cols="100" rows="10"></textarea>
                 </div>
         
-                <div class="botones">
-                    <input type="button" value="copiar" id="btnCopiar">
+                <div class="botones-caja">
+                    <label for="btnCopiar"></label>
+                    <input class="botones" type="button" value="Copiar" id="btnCopiar">
                 </div>
             </div>
 
 
-        </div>
+        </section>
 
     </main>
 
     <footer class="piePagina">
         <p class="textoPiePagina">&copy; Desarrollada por DiegoVz - 2022</p> 
-        <h3 class="contacto">
-            <ul>
-                <li>
-                    <a href="https://github.com/diegovz-A" target="_blank">
-                        <img src="imagenes/github_negativo.png">
-                    </a>
-                </li>
-            </ul>
+        <h3 class="contacto">   
+            <a href="https://github.com/diegovz-A" target="_blank">
+                <img src="imagenes/github_negativo.png">
+            </a>
         </h3>
     </footer>
 
