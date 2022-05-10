@@ -16,6 +16,11 @@ header{
     text-align: center;
     color: #fff;
 }
+.frase{
+    text-align: center;
+    font-size: 18px;
+    color:rgb(224, 216, 216);
+}
 .contenedor{
     display: flex;
     width: 100%;
@@ -31,15 +36,17 @@ header{
     display: inline-block;
 }
 .botones-caja{
+    display: flex;
+    flex-direction: row;
     padding: 1em;
-    vertical-align:bottom;
+    align-items: center;
 }
 .botones{
     background:content-box;
     border-radius: 10%;
     padding: 1em;
     font-weight: bold;
-    margin-top: 3em;
+    font-size: 18px;
 }
 #cryptoText{
     resize: none;
@@ -126,7 +133,22 @@ header{
         width: auto;
     }
     .contenedores{
-        display:block;
+        display:flex;
+        flex-direction: column;
+        align-content: center;
         margin: 0 auto;
+    }
+    #cryptoText, #resultadoText{
+        border: 3px solid grey;
+        font-size: 13px;
+    }
+    #cryptoText::placeholder{
+        font-size: 13px;
+    }
+    .botones-caja{
+        justify-content: space-evenly;
+    }
+    .botones{
+        font-size: 14px;
     }
 }
