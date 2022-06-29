@@ -3,8 +3,7 @@ body{
     font-family:'Ubuntu', sans-serif;
     margin:0 auto;
     flex-direction: column;
-    min-height: 100vh;
-    background-image: url(imagenes/Fondo.jpg);
+    background: url(imagenes/Fondo.jpg);
 }
 header{
     background:content-box;
@@ -23,23 +22,26 @@ header{
 }
 .contenedor{
     display: flex;
+    flex-direction: column;
     width: 100%;
     padding-top: 10%;
     padding-bottom: 10%;
-    flex-wrap: wrap;
 }
 
 .contenedores{
     display: flex;
-}
-.encriptador{
-    display: inline-block;
+    flex-direction: row;
 }
 .botones-caja{
     display: flex;
     flex-direction: row;
-    padding: 1em;
+    width: 40vw;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.btncaja__copiar{
+    justify-content: center;
 }
 .botones{
     background:content-box;
@@ -47,8 +49,9 @@ header{
     padding: 1em;
     font-weight: bold;
     font-size: 18px;
+    width: auto;
 }
-#cryptoText{
+.cryptoText{
     resize: none;
     background:content-box;
     margin-left: 20px;
@@ -61,33 +64,32 @@ header{
     color: white;
 
 }
-#cryptoText::placeholder{
+.cryptoText::placeholder{
     color: #fff;
     font-size: 15px;
 }
-#btnEncriptador{
+.btnEncriptador{
     color: whitesmoke;
     border-color: rgb(81, 221, 81);
+    background: rgb(81, 221, 81, .5);
 }   
-#btnEncriptador:hover{
+.btnDesencriptador{
+    color: whitesmoke;
+    border-color:rgb(212, 58, 58);
+    background: rgb(212, 58, 58, .5);
+}
+
+.btnEncriptador:hover{
     background: rgb(81, 221, 81);
     color: black;
     border-color: black;
 }
-#btnDesencriptador{
-    color: whitesmoke;
-    border-color:rgb(212, 58, 58);
-}
-#btnDesencriptador:hover{
+.btnDesencriptador:hover{
     background:rgb(212, 58, 58);
     color: black;
     border-color: black;
 }
-
-.resultado{
-    display:inline-block;
-}
-#resultadoText{
+.resultadoText{
     background: fixed;
     border: 5px solid grey;
     border-radius: 15px;
@@ -98,11 +100,12 @@ header{
     font-size: 18px;
     color: whitesmoke;
 }
-#btnCopiar{
+.btnCopiar{
     color: whitesmoke;
     border-color: rgb(93, 93, 240);
+    background: rgb(93, 93, 240, .5);
 }
-#btnCopiar:hover{
+.btnCopiar:hover{
     background:rgb(93, 93, 240);
     color: black;
     border-color: black;
@@ -129,26 +132,45 @@ header{
     h1{
         text-align: center;
     }
-    .contenedores,.contenedor,.encriptador,.botones-caja,.resultado,.piePagina,.contacto{
-        width: auto;
-    }
-    .contenedores{
-        display:flex;
-        flex-direction: column;
-        align-content: center;
-        margin: 0 auto;
-    }
-    #cryptoText, #resultadoText{
-        border: 3px solid grey;
-        font-size: 13px;
-    }
-    #cryptoText::placeholder{
-        font-size: 13px;
-    }
-    .botones-caja{
-        justify-content: space-evenly;
-    }
     .botones{
         font-size: 14px;
+    }
+    .botones-caja{
+        align-items: center;
+        box-sizing: border-box;
+        width: 80vw;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    .btncaja__copiar{
+        justify-content: center;
+    }
+    .contenedor{
+        display: flex;
+        justify-content: space-around;
+        height: 300px;
+    }
+    .contenedores{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .cryptoText, .resultadoText{
+        border: 3px solid grey;
+        font-size: 13px;
+        width: 80vw;
+    }
+    .cryptoText::placeholder{
+        font-size: 13px;
+    }
+    .encriptador, .resultado{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 80vw;
     }
 }

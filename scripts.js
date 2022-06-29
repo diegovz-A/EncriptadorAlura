@@ -1,4 +1,4 @@
-var resultado  = document.getElementById("resultadoText");
+var resultado  = document.querySelector(".resultadoText");
 
 var a = "ai";
 var e = "enter";
@@ -8,7 +8,9 @@ var u = "ufat";
 
 function encriptar(){
     var nuevoTexto = "";
-    var texto = document.getElementById("cryptoText").value;
+    var texto = document.querySelector(".cryptoText").value;
+    texto = texto.toLowerCase();
+
     for (var index = 0; index < texto.length; index++){
 
         if (texto[index] == "a"){
@@ -36,12 +38,13 @@ function encriptar(){
         }
     }
     resultado.value = nuevoTexto;
+
     
 }
 function desencriptar(){
 
     var nuevoTexto = "";
-    var texto = document.getElementById("cryptoText").value;
+    var texto = document.querySelector(".cryptoText").value;
 
     for (var index = 0; index < texto.length; index++){
 
@@ -99,7 +102,7 @@ function desencriptar(){
             nuevoTexto += texto[index];
         }
     }
-    document.getElementById("resultadoText").value = nuevoTexto;
+    document.querySelector(".resultadoText").value = nuevoTexto;
 }
 
 function copiarTexto (){
@@ -115,6 +118,6 @@ function copiarTexto (){
 
 
 
-document.getElementById("btnEncriptador").onclick = encriptar;
-document.getElementById("btnDesencriptador").onclick = desencriptar;
-document.getElementById("btnCopiar").onclick = copiarTexto;
+document.querySelector(".btnEncriptador").onclick = encriptar;
+document.querySelector(".btnDesencriptador").onclick = desencriptar;
+document.querySelector(".btnCopiar").onclick = copiarTexto;
